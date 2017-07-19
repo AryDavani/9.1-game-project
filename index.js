@@ -79,7 +79,7 @@
   startButton.onclick = () => {
     console.log("working?");
     $("#form").hide();
-    $("#attack").fadeIn();
+    $("#attack").fadeIn(5000);
 
     let randomEnemy = randomNum();
 
