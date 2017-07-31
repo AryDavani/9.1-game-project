@@ -4,7 +4,8 @@
   $(document).ready(function() {
     $('select').material_select();
   });
-
+  console.log('jquery', $('#sound'));
+  console.log('jquery raw dom element',$('#sound')[0]);
   // $("#attack").hide();
   $('#playAgain').hide();
 
@@ -43,9 +44,13 @@
       $('#enemyImg')[0].setAttribute('class', 'green-box');
     }
 
+    //console.log($('#sound'));
     if(goblin.currentHealth <= 0) {
       // window.alert('You Win!!');
       // window.location.reload();
+
+
+      $('#sound')[0].volume(.5).play();
       $("#enemy").fadeOut();
       $("#center").fadeOut();
       $('#message')[0].innerHTML = 'You Win!'
@@ -54,6 +59,7 @@
     } else if (fighter.currentHealth <= 0) {
       // window.alert('You Lose!!');
       // window.location.reload();
+      $('#sound')[0].play();
       $("#hero").fadeOut();
       $("#center").fadeOut();
       $('#message')[0].innerHTML = 'You Lose!'
@@ -75,6 +81,8 @@
   playAgain.onclick = () => {
     window.location.reload();
   };
+
+
 
   startButton.onclick = () => {
     console.log("working?");

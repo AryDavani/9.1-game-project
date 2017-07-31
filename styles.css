@@ -84,3 +84,7 @@ h4 {
 .homeFont {
   font-family: 'Deathrattle';
 }
+
+#sound {
+  display: none;
+}
