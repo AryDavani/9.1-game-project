@@ -85,6 +85,12 @@ h4 {
   font-family: 'Deathrattle';
 }
 
+.enter {
+  height: 100vh;
+}
+
+.enter 
+
 #sound {
   display: none;
 }
